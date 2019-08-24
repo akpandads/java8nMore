@@ -1,0 +1,15 @@
+1. Prefer standard Fucntional Interfaces instead of Custom ones
+2. Use the @FunctionalInterface annotation
+3. Use lamda expression to instantiate functional interfcaes
+4. Avoid overloading method as functional interfaces as paramters
+5. Dont treat lamda expression as Inner classes.
+    Inner classes have their own scope while lambda expressions have their scope as the enclosing method
+    this in inner class refers to the inner class object while this in lamda expression refers to the enclosing instance
+6. Avoid the follwoing:
+    - blocks of code in lamda body
+    - specifying paramter types. compiler is intelligent enough
+    - () on single paramter
+    - return statements
+    - method references
+
+https://www.baeldung.com/java-8-lambda-expressions-tips
