@@ -1,10 +1,13 @@
 package com.collectors;
 
+import com.collectors.interfaces.MapFibonacci;
 import com.domain.Artist;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Stream;
 
 public class TestCollectorsImpl {
 
@@ -27,4 +30,18 @@ public class TestCollectorsImpl {
 
         System.out.println(new CollectorsImpl().getLongestName(artists));
     }
+
+    @Test
+    public void testWordCount(){
+        Stream<String> names = Stream.of("John", "Paul", "George", "John",
+                "Paul", "John");
+        Map<String,Long> wordCOunted = new CollectorsImpl().countNumberOfNames(names);
+        wordCOunted.entrySet().forEach((name)-> System.out.println(name));
+    }
+
+    @Test
+    public void mapFibonacci(){
+        System.out.println(new MapFibonacci().calculateFibonacci(6));
+    }
 }
+
